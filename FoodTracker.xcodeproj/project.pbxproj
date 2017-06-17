@@ -13,6 +13,10 @@
 		2006505E1EC8D0350085634A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2006505D1EC8D0350085634A /* Assets.xcassets */; };
 		200650611EC8D0350085634A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2006505F1EC8D0350085634A /* LaunchScreen.storyboard */; };
 		2006506C1EC8D0350085634A /* FoodTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006506B1EC8D0350085634A /* FoodTrackerTests.swift */; };
+		200650771EC90C110085634A /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200650761EC90C110085634A /* RatingControl.swift */; };
+		209315671EEF548B0062659D /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209315661EEF548B0062659D /* MealTableViewController.swift */; };
+		20BF22901EC9676B00A8C40D /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BF228F1EC9676A00A8C40D /* Meal.swift */; };
+		20BF22921ECA650D00A8C40D /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BF22911ECA650D00A8C40D /* MealTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		200650671EC8D0350085634A /* FoodTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2006506B1EC8D0350085634A /* FoodTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackerTests.swift; sourceTree = "<group>"; };
 		2006506D1EC8D0350085634A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		200650761EC90C110085634A /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		209315661EEF548B0062659D /* MealTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
+		20BF228F1EC9676A00A8C40D /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		20BF22911ECA650D00A8C40D /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +87,11 @@
 			children = (
 				200650561EC8D0350085634A /* AppDelegate.swift */,
 				200650581EC8D0350085634A /* ViewController.swift */,
+				20BF228F1EC9676A00A8C40D /* Meal.swift */,
+				200650761EC90C110085634A /* RatingControl.swift */,
+				20BF22911ECA650D00A8C40D /* MealTableViewCell.swift */,
 				2006505A1EC8D0350085634A /* Main.storyboard */,
+				209315661EEF548B0062659D /* MealTableViewController.swift */,
 				2006505D1EC8D0350085634A /* Assets.xcassets */,
 				2006505F1EC8D0350085634A /* LaunchScreen.storyboard */,
 				200650621EC8D0350085634A /* Info.plist */,
@@ -199,8 +211,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20BF22901EC9676B00A8C40D /* Meal.swift in Sources */,
 				200650591EC8D0350085634A /* ViewController.swift in Sources */,
+				200650771EC90C110085634A /* RatingControl.swift in Sources */,
 				200650571EC8D0350085634A /* AppDelegate.swift in Sources */,
+				209315671EEF548B0062659D /* MealTableViewController.swift in Sources */,
+				20BF22921ECA650D00A8C40D /* MealTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +424,7 @@
 				200650721EC8D0350085634A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		200650731EC8D0350085634A /* Build configuration list for PBXNativeTarget "FoodTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +433,7 @@
 				200650751EC8D0350085634A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
