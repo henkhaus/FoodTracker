@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import os.log
 
 class MealTableViewController: UITableViewController {
     
@@ -109,10 +110,25 @@ class MealTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: Actions
+    
+    @IBAction func unwindToMealList(sender: UIStoryboardSegue){
+        if let sourceViewController = sender.source as? MealViewController, let meal = sourceViewController.meal{
+            // add new meal
+            let newIndexPath = IndexPath(row: meals.count, section:0)
+            meals.append(meal)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+    }
+    
+    
+    // MARK: Private Methods
     private func loadSampleMeals() {
         let photo1 = UIImage(named: "meal1")
         let photo2 = UIImage(named: "meal2")
