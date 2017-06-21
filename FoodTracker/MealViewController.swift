@@ -25,6 +25,15 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         // Handle the text field’s user input through delegate callbacks.
         // view controller will set itself as the delegate to nameTextField
         nameTextField.delegate = self
+        
+        // set up views if editing an existing meal
+        if let meal = meal{
+            navigationItem.title = meal.name
+            nameTextField.text = meal.name
+            photoImageView.image = meal.photo
+            ratingControl.rating = meal.rating
+        }
+        
         // enable save button only if text field is not empty
         updateSaveButtonState()
     }
@@ -73,7 +82,17 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     
     //MARK: Navigation
     @IBAction func cancel(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        // depending on style presentation (modal or push), this view controller needs to be dismissed in two ways
+        let isPresentingInAddMealMode = presentingViewController is UINavigationController
+        if isPresentingInAddMealMode{
+            dismiss(animated: true, completion: nil)
+        }
+        else if let owningNavigationController = navigationController{
+            owningNavigationController.popViewController(animated: true)
+        }
+        else{
+            fatalError("The MealViewController is not inside a navigation contoller.")
+        }
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
