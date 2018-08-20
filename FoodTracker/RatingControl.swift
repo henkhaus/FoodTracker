@@ -46,7 +46,7 @@ import UIKit
     
     
     //MARK: Button Action
-    func ratingButtonTapped(button: UIButton){
+    @objc func ratingButtonTapped(button: UIButton){
         //print("Button Pressed!")
         guard let index = ratingButtons.index(of:button) else {
             fatalError("the button,\(button), is not int the rating buttons list: \(ratingButtons)")
